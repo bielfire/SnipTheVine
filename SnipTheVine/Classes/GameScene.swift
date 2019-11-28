@@ -94,6 +94,19 @@ class GameScene: SKScene {
         return
     }
     
+    for (i, vineData) in vines.enumerated() {
+      let anchorPoint = CGPoint(
+        x: vineData.relAnchorPoint.x * size.width,
+        y: vineData.relAnchorPoint.y * size.height)
+      let vine = VineNode(
+        length: vineData.length,
+        anchorPoint: anchorPoint,
+        name: "\(i)")
+      
+      vine.addToScene(self)
+      
+      vine.attachToPrize(prize)
+    }
   }
   
   //MARK: - Croc methods
@@ -111,6 +124,8 @@ class GameScene: SKScene {
     crocodile.physicsBody?.isDynamic = false
     
     addChild(crocodile)
+    
+    animateCrocodile()
   }
   
   private func animateCrocodile() {
@@ -134,7 +149,13 @@ class GameScene: SKScene {
   }
   
   override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-    
+    for touch in touches {
+      let startPoint = touch.location(in: self)
+      let endPoint = touch.previousLocation(in: self)
+      
+      scene?.physicsWorld.enumerateBodies(alongRayStart: startPoint, end: endPoint, using: {body, _, _, _ in self.checkIfVineCut(withBody: body)})
+      showMoveParticles(touchPosition: startPoint)
+    }
   }
   
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
