@@ -139,7 +139,14 @@ class GameScene: SKScene {
   }
   
   private func runNomNomAnimation(withDelay delay: TimeInterval) {
-    
+    crocodile.removeAllActions()
+
+    let closeMouth = SKAction.setTexture(SKTexture(imageNamed: ImageName.crocMouthClosed))
+    let wait = SKAction.wait(forDuration: delay)
+    let openMouth = SKAction.setTexture(SKTexture(imageNamed: ImageName.crocMouthOpen))
+    let sequence = SKAction.sequence([closeMouth, wait, openMouth, wait, closeMouth])
+
+    crocodile.run(sequence)
   }
   
   //MARK: - Touch handling
@@ -149,11 +156,17 @@ class GameScene: SKScene {
   }
   
   override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-    for touch in touches {
+  for touch in touches {
       let startPoint = touch.location(in: self)
       let endPoint = touch.previousLocation(in: self)
       
-      scene?.physicsWorld.enumerateBodies(alongRayStart: startPoint, end: endPoint, using: {body, _, _, _ in self.checkIfVineCut(withBody: body)})
+      scene?.physicsWorld.enumerateBodies(
+        alongRayStart: startPoint,
+        end: endPoint,
+        using: { body, _, _, _ in
+          self.checkIfVineCut(withBody: body)
+      })
+      
       showMoveParticles(touchPosition: startPoint)
     }
   }
@@ -176,11 +189,38 @@ class GameScene: SKScene {
   //MARK: - Game logic
   
   private func checkIfVineCut(withBody body: SKPhysicsBody) {
-    
+  if didCutVine && !GameConfiguration.canCutMultipleVinesAtOnce {
+    return
   }
+    
+      let node = body.node!
+
+      if let name = node.name {
+        node.removeFromParent()
+
+        enumerateChildNodes(withName: name, using: { node, _ in
+          let fadeAway = SKAction.fadeOut(withDuration: 0.25)
+          let removeNode = SKAction.removeFromParent()
+          let sequence = SKAction.sequence([fadeAway, removeNode])
+          node.run(sequence)
+        })
+        
+        crocodile.removeAllActions()
+        crocodile.texture = SKTexture(imageNamed: ImageName.crocMouthOpen)
+        animateCrocodile()
+        run(sliceSoundAction)
+        didCutVine = true
+      }
+    }
   
   private func switchToNewGame(withTransition transition: SKTransition) {
-    
+    let delay = SKAction.wait(forDuration: 1)
+    let sceneChange = SKAction.run {
+    let scene = GameScene(size: self.size)
+    self.view?.presentScene(scene, transition: transition)
+    }
+
+    run(.sequence([delay, sceneChange]))
   }
   
   //MARK: - Audio
@@ -192,11 +232,23 @@ class GameScene: SKScene {
 
 extension GameScene: SKPhysicsContactDelegate {
   override func update(_ currentTime: TimeInterval) {
-    
+    if prize.position.y <= 0 {
+      switchToNewGame(withTransition: .fade(withDuration: 1.0))
+    }
   }
   
   func didBegin(_ contact: SKPhysicsContact) {
-    
+    if (contact.bodyA.node == crocodile && contact.bodyB.node == prize)
+    || (contact.bodyA.node == prize && contact.bodyB.node == crocodile) {
+      
+      let shrink = SKAction.scale(to: 0, duration: 0.08)
+      let removeNode = SKAction.removeFromParent()
+      let sequence = SKAction.sequence([shrink, removeNode])
+      prize.run(sequence)
+      
+      runNomNomAnimation(withDelay: 0.15)
+      switchToNewGame(withTransition: .doorway(withDuration: 1.0))
+    }
   }
 }
 
