@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>295A9ACD-5054-412E-9EDC-816762E747EE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>295A9ACD-5054-412E-9EDC-816762E747EE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SnipTheVine project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SnipTheVine</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SnipTheVine</string>
+			<key>timeStartedRecording</key>
+			<real>596747801.46248698</real>
+			<key>timeStoppedRecording</key>
+			<real>596747801.53755903</real>
+			<key>title</key>
+			<string>Build SnipTheVine</string>
+			<key>uniqueIdentifier</key>
+			<string>295A9ACD-5054-412E-9EDC-816762E747EE</string>
+		</dict>
+		<key>4D395830-C17C-4A08-86F1-F545FF32D4B9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4D395830-C17C-4A08-86F1-F545FF32D4B9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SnipTheVine project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SnipTheVine</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SnipTheVine</string>
+			<key>timeStartedRecording</key>
+			<real>596676691.32172894</real>
+			<key>timeStoppedRecording</key>
+			<real>596676691.435812</real>
+			<key>title</key>
+			<string>Build SnipTheVine</string>
+			<key>uniqueIdentifier</key>
+			<string>4D395830-C17C-4A08-86F1-F545FF32D4B9</string>
+		</dict>
+		<key>6A3CEA12-57AF-417B-B727-A4E016481C42</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6A3CEA12-57AF-417B-B727-A4E016481C42.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SnipTheVine project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SnipTheVine</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SnipTheVine</string>
+			<key>timeStartedRecording</key>
+			<real>596747944.90977895</real>
+			<key>timeStoppedRecording</key>
+			<real>596747947.61369205</real>
+			<key>title</key>
+			<string>Build SnipTheVine</string>
+			<key>uniqueIdentifier</key>
+			<string>6A3CEA12-57AF-417B-B727-A4E016481C42</string>
+		</dict>
+		<key>7FC076CE-48F5-4B60-86FE-F21EC4FE7584</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7FC076CE-48F5-4B60-86FE-F21EC4FE7584.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SnipTheVine project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SnipTheVine</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SnipTheVine</string>
+			<key>timeStartedRecording</key>
+			<real>596747814.061185</real>
+			<key>timeStoppedRecording</key>
+			<real>596747814.33669198</real>
+			<key>title</key>
+			<string>Build SnipTheVine</string>
+			<key>uniqueIdentifier</key>
+			<string>7FC076CE-48F5-4B60-86FE-F21EC4FE7584</string>
+		</dict>
+		<key>E758FEEA-3DB1-460A-A388-F740B9AD3B86</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E758FEEA-3DB1-460A-A388-F740B9AD3B86.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SnipTheVine project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SnipTheVine</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build SnipTheVine</string>
+			<key>timeStartedRecording</key>
+			<real>596747914.995772</real>
+			<key>timeStoppedRecording</key>
+			<real>596747918.71314394</real>
+			<key>title</key>
+			<string>Build SnipTheVine</string>
+			<key>uniqueIdentifier</key>
+			<string>E758FEEA-3DB1-460A-A388-F740B9AD3B86</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

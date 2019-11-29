@@ -1,0 +1,10 @@
+version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+options: "4a7639a5992b34bd96f4fcfcc2959e9f"
+build_time: [1574809966, 644886000]
+inputs:
+  "/Users/gabrieljacinto/Downloads/SnipTheVine/Starter/SnipTheVine/Classes/AppDelegate.swift": [9223372036, 854775807]
+  "/Users/gabrieljacinto/Downloads/SnipTheVine/Starter/SnipTheVine/Classes/VineData.swift": [9223372036, 854775807]
+  "/Users/gabrieljacinto/Downloads/SnipTheVine/Starter/SnipTheVine/Classes/GameViewController.swift": [9223372036, 854775807]
+  "/Users/gabrieljacinto/Downloads/SnipTheVine/Starter/SnipTheVine/Classes/GameScene.swift": [9223372036, 854775807]
+  "/Users/gabrieljacinto/Downloads/SnipTheVine/Starter/SnipTheVine/Classes/VineNode.swift": [9223372036, 854775807]
+  "/Users/gabrieljacinto/Downloads/SnipTheVine/Starter/SnipTheVine/Classes/Constants.swift": [9223372036, 854775807]
